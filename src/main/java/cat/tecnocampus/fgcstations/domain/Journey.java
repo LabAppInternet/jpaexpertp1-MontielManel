@@ -2,9 +2,13 @@ package cat.tecnocampus.fgcstations.domain;
 
 
 import cat.tecnocampus.fgcstations.domain.exceptions.SameOriginDestinationException;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
 public class Journey {
 
+    @Id
     private String id;
 
     private Station origin;

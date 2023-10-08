@@ -1,7 +1,12 @@
 package cat.tecnocampus.fgcstations.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Station {
 
+    @Id
     private String nom;
 
     private String longitud;

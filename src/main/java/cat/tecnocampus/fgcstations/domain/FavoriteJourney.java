@@ -1,9 +1,14 @@
 package cat.tecnocampus.fgcstations.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.util.List;
 
+@Entity
 public class FavoriteJourney {
 
+    @Id
     private String id;
     private List<DayTimeStart> startList;
     private Journey journey;

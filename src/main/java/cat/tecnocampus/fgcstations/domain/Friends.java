@@ -1,8 +1,13 @@
 package cat.tecnocampus.fgcstations.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.util.List;
 
+@Entity
 public class Friends {
+    @Id
     private String username;
     private List<String> friends;
 

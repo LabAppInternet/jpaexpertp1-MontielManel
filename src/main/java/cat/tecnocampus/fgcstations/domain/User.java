@@ -3,8 +3,12 @@ package cat.tecnocampus.fgcstations.domain;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
 public class User implements Serializable {
+    @Id
     private String username;
 
     private String name;
@@ -13,6 +17,20 @@ public class User implements Serializable {
     private String email;
 
     public List<FavoriteJourney> favoriteJourneyList;
+
+
+    /*
+    // Replace UserDAO with UserRepository
+    private final UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+    */
 
     public User() {
        favoriteJourneyList = new ArrayList<>();
